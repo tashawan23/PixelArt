@@ -1,0 +1,1 @@
+export default ['white', 'black', 'lightblue', 'blue', 'darkblue', 'pink', 'purple', 'green', 'yellow']

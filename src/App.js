@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useState } from 'react'
+import { Canvas } from './components/Canvas'
+import { ColourPicker } from './components/ColourPicker'
 
 function App() {
+  const [colour, setColour] = useState(0)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">Pixel Art Canvas</div>
+      <span>
+       <ColourPicker currentColour={colour} setColour={colour => setColour(colour)} />
+       </span>
+       <span>
+      <Canvas currentColour={colour}/>
+      </span>
     </div>
   );
 }
